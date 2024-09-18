@@ -27,14 +27,14 @@ public class FlightManagementRunner implements CommandLineRunner {
         flights.forEach(System.out::println);
 
         // Get a flight by ID
-        UUID flightId = UUID.randomUUID(); // Replace with an actual flight ID
+        Long flightId = 1L; // Replace with an actual flight ID
         FlightDto flight = client.getFlightById(flightId);
         System.out.println(flight);
 
-        // Book a flight ticket
+        //Book a flight ticket
         TicketRequest ticketRequest = new TicketRequest();
-        ticketRequest.setSeatIds(Arrays.asList(UUID.randomUUID())); // Replace with actual seat IDs
-        ticketRequest.setUserId(UUID.randomUUID()); // Replace with an actual user ID
+        ticketRequest.setSeatIds(Arrays.asList(1L, 2L)); // Replace with actual seat IDs
+        ticketRequest.setUserId(1L); // Replace with an actual user ID
         ticketRequest.setFlightId(flightId);
         Ticket ticket = client.bookFlightTicket(ticketRequest);
         System.out.println(ticket);

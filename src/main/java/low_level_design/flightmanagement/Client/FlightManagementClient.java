@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
-import java.util.UUID;
 
 @Component
 public class FlightManagementClient {
@@ -26,7 +25,7 @@ public class FlightManagementClient {
         return response.getBody();
     }
 
-    public FlightDto getFlightById(UUID id) {
+    public FlightDto getFlightById(Long id) {
         String url = baseUrl + "/flights/" + id;
         ResponseEntity<FlightDto> response = restTemplate.getForEntity(url, FlightDto.class);
         return response.getBody();
