@@ -60,4 +60,5 @@ Do not use any database or NoSQL store, use in-memory data structure.
 Do not create any Ul for the application
 Driver class can be designed as per your choice, but it should cover all the scenarios. : Optional Implement unit test
 Flight Data:
+
 ![img.png](img.png)
