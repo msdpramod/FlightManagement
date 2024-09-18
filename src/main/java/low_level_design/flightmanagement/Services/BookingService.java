@@ -40,7 +40,7 @@ public class BookingService implements BookingServiceInterface {
         bookingRepository.delete(booking);
     }
     @Transactional(isolation = Isolation.SERIALIZABLE, timeout = 2)
-    public Ticket bookFlightTicket(List<UUID> seatIds, UUID userId, UUID flightId) throws InValidArgumentsException, SeatNotAvailableException {
+    public Ticket bookFlightTicket(List<Long> seatIds, Long userId, Long flightId) throws InValidArgumentsException, SeatNotAvailableException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new InValidArgumentsException("User with id: " + userId + " doesn't exist."));
 

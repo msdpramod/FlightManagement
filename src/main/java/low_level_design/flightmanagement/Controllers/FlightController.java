@@ -53,13 +53,13 @@ public class FlightController {
     }
 
     @GetMapping("/flights/{id}")
-    public ResponseEntity<FlightDto> getFlightById(@PathVariable UUID id) throws InValidArgumentsException {
+    public ResponseEntity<FlightDto> getFlightById(@PathVariable Long id) throws InValidArgumentsException {
         FlightDto flight = flightService.findFlightById(id);
         return new ResponseEntity<>(flight, HttpStatus.OK);
     }
 
     @PutMapping("/user/{id}")
-    public ResponseEntity<UserDto> updateUser(@PathVariable UUID id, @RequestBody UserDto userDto) {
+    public ResponseEntity<UserDto> updateUser(@PathVariable Long id, @RequestBody UserDto userDto) {
         UserDto updatedUser = userService.updateUser(id, userDto);
         return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }

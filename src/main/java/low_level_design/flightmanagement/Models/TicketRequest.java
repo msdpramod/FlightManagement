@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class TicketRequest {
-    private List<UUID> seatIds;
-    private UUID userId;
-    private UUID flightId;
+    private List<Long> seatIds;
+    private Long userId;
+    private Long flightId;
 }
