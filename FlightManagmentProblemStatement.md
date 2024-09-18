@@ -61,4 +61,4 @@ Do not create any Ul for the application
 Driver class can be designed as per your choice, but it should cover all the scenarios. : Optional Implement unit test
 Flight Data:
 
-![img.png](img.png)
+![Screenshot 2024-09-18 at 9.14.37 AM.png](..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202024-09-18%20at%209.14.37%E2%80%AFAM.png)
